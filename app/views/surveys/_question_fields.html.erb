@@ -3,7 +3,8 @@
   <%= f.text_area :content, rows: 3 %><br/>
   <%= f.check_box :_destroy %>
   <%= f.label :_destroy, "Remove Question" %>
-</p>
-<%= f.fields_for :answers do |builder| %>
+  <%= f.fields_for :answers do |builder| %>
     <%= render partial: 'answer_fields', locals: {f: builder} %>
-<% end %>
+  <% end %>
+  <%= link_to_add_fields "Add Answer", f, :answers %>
+</p>
