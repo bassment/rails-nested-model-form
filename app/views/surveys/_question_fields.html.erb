@@ -5,5 +5,5 @@
   <%= f.label :_destroy, "Remove Question" %>
 </p>
 <%= f.fields_for :answers do |builder| %>
-    <%= render 'answer_fields', f: builder %>
+    <%= render partial: 'answer_fields', locals: {f: builder} %>
 <% end %>
